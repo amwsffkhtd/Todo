@@ -2,20 +2,21 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_gallery">
+    android:id="@+id/mobile_navigation1"
+    app:startDestination="@+id/nav_test111">
+
 
 
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_test111"
         android:name="per.matt.learn.todo.ui.Test11Fragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="Test111"
+        tools:layout="@layout/fragment_test111" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_test222"
         android:name="per.matt.learn.todo.ui.Test22Fragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="Test222"
+        tools:layout="@layout/fragment_test222" />
 </navigation>
