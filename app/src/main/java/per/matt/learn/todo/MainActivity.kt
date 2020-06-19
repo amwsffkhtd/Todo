@@ -1,7 +1,9 @@
 package per.matt.learn.todo
 
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -12,17 +14,19 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
+import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var mContext: Context;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mContext = this;
         setupNavigationDrawer()
         setSupportActionBar(findViewById(R.id.toolbar))
 
@@ -34,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         findViewById<NavigationView>(R.id.nav_view)
             .setupWithNavController(navController)
+
+        fab.setOnClickListener({
+            Toast.makeText(mContext,"show fab",Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -46,5 +54,11 @@ class MainActivity : AppCompatActivity() {
             .apply {
                 setStatusBarBackground(R.color.colorPrimaryDark)
             }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.main, menu)
+        return true
     }
 }
