@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController: NavController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration =
-            AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow)
+            AppBarConfiguration.Builder(R.id.nav_task, R.id.nav_gallery, R.id.nav_test)
                 .setDrawerLayout(drawerLayout)
                 .build()
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             .setupWithNavController(navController)
 
         fab.setOnClickListener({
-            Toast.makeText(mContext,"show fab",Toast.LENGTH_SHORT).show()
+
         })
     }
 

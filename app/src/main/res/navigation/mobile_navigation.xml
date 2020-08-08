@@ -3,19 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_task">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="per.matt.learn.todo.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
+        android:id="@+id/nav_task"
+        android:name="per.matt.learn.todo.task.TaskFragment"
+        android:label="TaskFragment"
+        tools:layout="@layout/fragment_task"
+        >
         <action
-            android:id="@+id/action_nav_home_to_nav_slideshow"
-            app:destination="@id/nav_slideshow" />
-        <action
-            android:id="@+id/action_nav_home_to_nav_test_databinding"
-            app:destination="@id/nav_test_databinding" />
+            android:id="@+id/action_nav_task_to_nav_taskAddEdit"
+            app:destination="@id/nav_taskAddEdit" />
     </fragment>
 
     <fragment
@@ -26,15 +24,26 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="per.matt.learn.todo.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" >
+        android:id="@+id/nav_test"
+        android:name="per.matt.learn.todo.ui.slideshow.TestFragment"
+        android:label="Test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_nav_test_to_nav_test_databinding"
+            app:destination="@id/nav_test_databinding" />
     </fragment>
     <fragment
         android:id="@+id/nav_test_databinding"
-        android:name="per.matt.learn.todo.test.databinding.DatabindingFragment"
+        android:name="per.matt.learn.todo.testcode.databinding.DatabindingFragment"
         android:label="DataBinding"
         tools:layout="@layout/fragment_databinding" >
     </fragment>
+    <fragment
+        android:id="@+id/nav_taskAddEdit"
+        android:name="per.matt.learn.todo.task.TaskAddEditFragment"
+        android:label="TaskAddEditFragment"
+        tools:layout="@layout/fragment_task_addedit"
+        />
+
+
 </navigation>
