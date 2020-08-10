@@ -6,7 +6,9 @@
         <variable
             name="user"
             type="per.matt.learn.todo.testcode.databinding.User" />
-
+        <variable
+            name="observableUser"
+            type="per.matt.learn.todo.testcode.databinding.ObservableUser" />
         <variable
             name="handler"
             type="per.matt.learn.todo.testcode.databinding.ViewEventHandler" />
@@ -25,13 +27,10 @@
             android:textSize="20sp"
             android:text='@{user.firstName+" "+user.lastName}'
             android:clickable="true"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
         <Button
             android:id="@+id/btn_test"
             android:layout_width="wrap_content"
@@ -41,8 +40,32 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_test"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp"
-
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:id="@+id/tv_observable_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text='@{observableUser.firstName+" "+observableUser.lastName +" "+observableUser.age}'
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@+id/btn_test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/btn_observable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observable User"
+            android:onClick="@{(v) -> handler.observableClick(v,observableUser)}"
+            app:layout_constraintTop_toBottomOf="@+id/tv_observable_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
