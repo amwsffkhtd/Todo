@@ -1,4 +1,4 @@
-package per.matt.learn.todo.testcode.databinding
+package per.matt.learn.todo.testcode.bean
 
 class User(_firstName:String="",_lastName:String="") {
     var firstName:String=_firstName

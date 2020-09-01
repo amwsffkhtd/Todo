@@ -27,8 +27,9 @@ class TestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_room.setOnClickListener{
-            Toast.makeText(context,"aaaa",Toast.LENGTH_SHORT).show()
+        btn_viewmodel.setOnClickListener{
+            val action = TestFragmentDirections.actionNavTestToNavTestViewmodel()
+            findNavController().navigate(action)
         }
         btn_databinding.setOnClickListener{
             val action = TestFragmentDirections.actionNavTestToNavTestDatabinding();

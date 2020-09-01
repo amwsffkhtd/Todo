@@ -1,4 +1,4 @@
-package per.matt.learn.todo.testcode.databinding
+package per.matt.learn.todo.testcode.bean
 
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt

@@ -31,12 +31,21 @@
         <action
             android:id="@+id/action_nav_test_to_nav_test_databinding"
             app:destination="@id/nav_test_databinding" />
+        <action
+            android:id="@+id/action_nav_test_to_nav_test_viewmodel"
+            app:destination="@id/nav_test_viewmodel" />
     </fragment>
     <fragment
         android:id="@+id/nav_test_databinding"
         android:name="per.matt.learn.todo.testcode.databinding.DatabindingFragment"
         android:label="DataBinding"
         tools:layout="@layout/fragment_databinding" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_test_viewmodel"
+        android:name="per.matt.learn.todo.testcode.viewmodel.ViewModelFragment"
+        android:label="ViewModel"
+        tools:layout="@layout/fragment_viewmodel" >
     </fragment>
     <fragment
         android:id="@+id/nav_taskAddEdit"
